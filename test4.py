@@ -5,7 +5,6 @@ import os
 photos = os.listdir("test_id")
 
 with open("resultsemotions.csv", "w") as file:
-    print(photos)
     writer = csv.writer(file)
     for photo in photos:
         result = DeepFace.analyze(img_path = f"test_id/{photo}")
